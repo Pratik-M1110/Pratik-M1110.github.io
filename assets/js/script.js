@@ -59,7 +59,7 @@ $(document).ready(function () {
 
 // <!-- typed js effect starts -->
 var typed = new Typed(".typing-text", {
-    strings: ["Software Development"],
+    strings: ["Full-stack developer"],
     loop: true,
     typeSpeed: 50,
     backSpeed: 25,
