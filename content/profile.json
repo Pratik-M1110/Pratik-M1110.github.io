@@ -1,0 +1,118 @@
+{
+  "meta": {
+    "title": "Pratik Maynal — Software Developer",
+    "description": "Portfolio of Pratik Maynal, a full-stack software developer based in Pune, Maharashtra.",
+    "wordmark": "PRATIK",
+    "wordmarkLayout": { "tracking": 0.26, "fillWide": 0.92, "fillNarrow": 0.94 }
+  },
+
+  "theme": {
+    "loader": "Raising the mountain temple",
+    "ornament": "影の道",
+    "preview": { "jp": "山門", "caption": "Sanmon — before the bell" }
+  },
+
+  "person": {
+    "name": "Pratik Maynal",
+    "email": "pratikmaynal1@gmail.com",
+    "phone": "+91 7517503563",
+    "location": "Pune, Maharashtra",
+    "resumeUrl": "https://drive.google.com/file/d/1fTEMICmhZun5fuxTyI4FeYTx3LBOGTMn/view?usp=drive_link",
+    "photo": null
+  },
+
+  "links": [
+    { "label": "LinkedIn", "url": "https://www.linkedin.com/in/pratik-maynal/" },
+    { "label": "GitHub", "url": "https://github.com/Pratik-M1110" },
+    { "label": "Instagram", "url": "https://www.instagram.com/pratik_m8456/" }
+  ],
+
+  "nav": {
+    "brand": "PRATIK",
+    "tagline": "SOFTWARE DEVELOPER",
+    "links": [
+      { "label": "About", "alt": "自己紹介", "href": "#gate" },
+      { "label": "Skills", "alt": "技術", "href": "#pathways" },
+      { "label": "Experience", "alt": "経歴", "href": "#lessons" },
+      { "label": "Contact", "alt": "連絡", "href": "#eternity" }
+    ],
+    "railLabels": ["Home", "About", "Skills", "Experience", "Contact", "Footer"]
+  },
+
+  "hero": {
+    "eyebrow": "Chapter 00 — Introduction",
+    "title": ["Hi there,", "I am Pratik", "Maynal."],
+    "subtitle": "Full-stack developer based in Pune, Maharashtra, building software from concept through delivery.",
+    "chips": [
+      { "title": "About", "text": "A dedicated engineer, always up for new challenges." },
+      { "title": "Skills", "text": "The languages, web tools and tooling I work with." },
+      { "title": "Experience", "text": "Software Engineer at Academian, Pune." },
+      { "title": "Education", "text": "Advanced Computing and Electronics Engineering." }
+    ]
+  },
+
+  "about": {
+    "number": "01",
+    "label": "About",
+    "jp": "自己紹介",
+    "title": "I’m Pratik, a software developer.",
+    "lead": "I’m a dedicated Software Engineer who’s always up for new experiences and challenges. Experienced in multiple languages and tools used for development, analysis and software management.",
+    "body": "Offering experience in full software development lifecycle – from concept through delivery. Adaptable to changing environments, and suited for the Agile development lifecycle. Experienced with development under resource constraints.",
+    "resumeLabel": "Resume",
+    "portraitCaption": "Portrait",
+    "portraitNote": "Photo to be added",
+    "stats": [
+      { "kind": "skills", "label": "Technologies" },
+      { "kind": "education", "label": "Qualifications" },
+      { "value": "2024", "label": "Joined Academian" },
+      { "value": "Pune", "label": "Based in" }
+    ]
+  },
+
+  "skills": {
+    "number": "02",
+    "label": "Skills",
+    "jp": "技術",
+    "groups": [
+      { "title": "Languages", "jp": "言語", "unit": "languages", "items": ["Java", "C#", "C", "JavaScript"] },
+      { "title": "Web", "jp": "ウェブ", "unit": "technologies", "items": ["HTML5", "CSS3", "ReactJS", "NodeJS"] },
+      { "title": "Tools", "jp": "道具", "unit": "tools", "items": ["MySQL", "Docker", "Jenkins", "Git VCS", "GitHub"] }
+    ]
+  },
+
+  "journey": {
+    "number": "03",
+    "label": "Experience & Education",
+    "jp": "経歴",
+    "title": "You never stop learning.",
+    "intro": "Working as a Software Engineer in Pune since March 2024, after a Postgraduate Diploma in Advanced Computing and a Bachelor’s in Electronics and Telecommunications Engineering.",
+    "entries": [
+      { "type": "experience", "title": "Software Engineer", "jp": "経験", "text": "Academian Pvt Ltd, Pune", "when": "Mar 2024 — Present" },
+      { "type": "education", "title": "Postgraduate Diploma in Advanced Computing", "jp": "学歴", "text": "Sunbeam, Pune", "when": "2023" },
+      { "type": "education", "title": "Bachelor’s in Electronics and Telecommunications Engineering", "jp": "学歴", "text": "Sinhgad College of Engineering", "when": "2020" }
+    ]
+  },
+
+  "contact": {
+    "eyebrow": "Chapter 04 — Contact",
+    "title": "Say hello",
+    "text": "Thank you for visiting my personal portfolio. Connect with me over socials, or send a note any time.",
+    "cta": "Email me"
+  },
+
+  "footer": {
+    "statement": "Software developer in Pune, building from concept through delivery.",
+    "quickLinksTitle": "Quick links",
+    "quickLinks": [
+      { "label": "About", "href": "#gate" },
+      { "label": "Skills", "href": "#pathways" },
+      { "label": "Experience", "href": "#lessons" },
+      { "label": "Education", "href": "#lessons" },
+      { "label": "Contact", "href": "#eternity" }
+    ],
+    "contactTitle": "Contact",
+    "elsewhereTitle": "Elsewhere",
+    "motto": "You never stop learning",
+    "credit": "WebGL · Onest · Pune"
+  }
+}

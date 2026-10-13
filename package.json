@@ -1,0 +1,28 @@
+{
+  "name": "pratik-maynal-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Pratik Maynal's portfolio, built on the ThreeUI Kage landing page.",
+  "scripts": {
+    "generate": "node scripts/generate-portfolio.mjs",
+    "verify:sources": "node scripts/verify-sources.mjs",
+    "predev": "npm run verify:sources && npm run generate",
+    "dev": "vite",
+    "typecheck": "tsc --noEmit",
+    "prebuild": "npm run verify:sources && npm run generate",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.1.2",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.4"
+  }
+}

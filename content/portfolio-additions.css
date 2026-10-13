@@ -1,0 +1,88 @@
+/* ===========================================================================
+   Portfolio additions.
+
+   scripts/generate-portfolio.mjs inlines this block straight after the authored
+   Kage stylesheet. Everything above it in portfolio.html is the canonical page;
+   everything here is new, or an override that relies on coming later in the
+   cascade at equal specificity.
+   =========================================================================== */
+
+/* The wordmark face. The authored 'Wordmark' subset only carries the letters
+   Kage needs, so this is the same Poppins SemiBold with the full capital
+   alphabet, which lets the word be any name. */
+@font-face{
+  font-family:'PortfolioWordmark'; font-style:normal; font-weight:600; font-display:block;
+  src:url(secret-pathways-assets/portfolio-wordmark.woff2) format('woff2');
+}
+/* the no-WebGL fallback sets the word in the document; six letters need a smaller size than four */
+.no-webgl .word-fb{ font-family:'PortfolioWordmark','Onest',sans-serif; font-size:15.5vw; }
+
+/* ------------------------------------------------------ hero: preview window
+   Smaller and lower than authored. With a six-letter name the last letter lands under the window
+   at every width, and the window sits in front of the 3-D word. */
+body[data-layout-hero="b"] .peek{ width:clamp(118px,10.5vw,170px); bottom:clamp(26px,4.5vh,56px); }
+body[data-layout-hero="b"] .peek-cap{ margin-top:7px; }
+body[data-layout-hero="b"] .peek-cap b.jp{ font-size:clamp(15px,1.35vw,21px); letter-spacing:.14em; }
+body[data-layout-hero="b"] .peek-cap i{ font-size:8px; letter-spacing:.16em; }
+
+/* ------------------------------------------------------ about: portrait slot */
+.portrait{ margin:0; width:min(100%,300px); }
+.portrait-fr{
+  position:relative; aspect-ratio:4/5; overflow:hidden; isolation:isolate;
+  background:linear-gradient(150deg,rgba(16,26,29,.82),rgba(10,13,16,.9) 62%,rgba(26,12,11,.82));
+  outline:1px solid var(--line-soft); outline-offset:-1px;
+}
+.portrait-fr img{
+  position:absolute; inset:0; width:100%; height:100%; object-fit:cover;
+  filter:saturate(.9) brightness(.92);
+}
+/* the title spans the first two columns, the portrait sits beneath it, and the copy
+   takes the right-hand column down both rows */
+body[data-layout-story="b"] .gate-grid .portrait{ grid-column:1 / 3; grid-row:2; }
+body[data-layout-story="b"] .gate-copy{ grid-row:1 / span 2; }
+
+/* ------------------------------------------------------ about: facts */
+.facts{ margin:28px 0 0; padding:0; display:grid; gap:12px; }
+.facts > div{ display:grid; grid-template-columns:74px minmax(0,1fr); gap:14px; align-items:baseline; }
+.facts dt{ font-size:10px; font-weight:500; letter-spacing:.22em; text-transform:uppercase; color:var(--muted); }
+.facts dd{
+  margin:0; font-size:13px; line-height:1.5; color:var(--bone-dim);
+  text-shadow:0 1px 18px rgba(3,6,8,.85); overflow-wrap:anywhere;
+}
+.facts a{ border-bottom:1px solid var(--line); transition:color .35s, border-color .35s; }
+.facts a:hover{ color:var(--bone); border-color:var(--vermilion); }
+
+/* ------------------------------------------------------ skills: title and tags over each plate
+   Held to the top of the plate: the live foreground (sakura, maple, bush) sweeps over the lower
+   edge of the cards, so anything set there is intermittently hidden. The right inset leaves room
+   for the arrow that appears on hover. */
+#cards .card-lab{ top:14px; bottom:auto; right:52px; }
+.card-tags{
+  position:absolute; top:46px; left:16px; right:52px; z-index:2;
+  display:flex; flex-wrap:wrap; gap:6px; margin:0; padding:0; list-style:none; pointer-events:none;
+}
+.card-tags li{
+  padding:5px 10px; border:1px solid rgba(223,231,224,.24); border-radius:100px;
+  background:rgba(5,7,10,.58); color:var(--bone);
+  font-size:10px; font-weight:500; letter-spacing:.14em; line-height:1.2; text-transform:uppercase;
+}
+
+/* ------------------------------------------------------ experience: plate titles */
+.nw{ white-space:nowrap; }
+
+/* ------------------------------------------------------ experience: three plates
+   The post leads on a full row; the two qualifications share the row beneath it. */
+body[data-layout-curriculum="b"] .les:nth-child(1){ grid-column:span 6; }
+body[data-layout-curriculum="b"] .les:nth-child(n+2){ grid-column:span 3; }
+
+@media (max-width:1080px){
+  body[data-layout-story="b"] .gate-grid .portrait{ grid-column:auto; grid-row:auto; width:min(100%,240px); }
+  body[data-layout-story="b"] .gate-copy{ grid-row:auto; }
+  body[data-layout-curriculum="b"] .les:nth-child(1){ grid-column:span 6; }
+  body[data-layout-curriculum="b"] .les:nth-child(n+2),
+  body[data-layout-curriculum="b"] .les:last-child{ grid-column:span 3; }
+}
+@media (max-width:820px){
+  body[data-layout-curriculum="b"] .les:nth-child(n){ grid-column:auto; }
+  body[data-layout-story="b"] .gate-grid .portrait{ width:min(100%,200px); }
+}

@@ -1,0 +1,27 @@
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  background: #05070a;
+}
+
+/* The landing page scrolls inside its own frame, so the host is a fixed,
+   viewport-sized, overflow-controlled parent and the app itself never scrolls. */
+.shader-frame {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  background: #05070a;
+}
+
+.shader-frame__loading {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  color: #78837c;
+  font: 500 10px/1 system-ui, sans-serif;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+}
